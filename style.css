@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    padding: 20px;
+}
+
+.wrapper {
+    width: 450px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 12px rgba(0,0,0,0.3);
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.task-list li {
+    position: relative;
+    padding: 12px 15px 12px 45px;
+    margin-bottom: 8px;
+    background-color: rgb(173, 216, 230);
+    border-radius: 8px;
+    color: #334155;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.task-list li:nth-child(even) {
+    background-color: rgb(135, 206, 250);
+}
+
+.task-list li::before {
+    content: "☐";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.task-list li.checked {
+    background-color: #e2e8f0;
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+.task-list li.checked::before {
+    content: "☑";
+}
+
+.cross {
+    position: absolute;
+    right: 15px;
+    color: red;
+    font-weight: bold;
+}
